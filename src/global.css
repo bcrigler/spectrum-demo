@@ -1,0 +1,38 @@
+html{
+    font-size:62.5%
+}
+body{
+    background: #01315A;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #01315A;
+}
+.headerTwo {
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.welcomeUser {
+    font-style: italic;
+    font-size: 11px;
+}
+
+.centeredFlexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.rowMargins {
+    margin: 1em 0;
+}
+.whiteRounded {
+    width: 600px;
+    min-height: 200px;
+    height: auto;
+    background: #ffffff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 1em;
+}

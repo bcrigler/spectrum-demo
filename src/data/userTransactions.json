@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "amount": 160.97,
+    "tranactionDate": "07-01-2020 09:00:00",
+    "transactionUser": 1,
+    "products": ["premier"]
+  },
+  {
+    "id": 2,
+    "amount": 175.97,
+    "tranactionDate": "07-01-2020 09:00:00",
+    "transactionUser": 1,
+    "product": ["premier","rental","rental"]
+  }
+]
