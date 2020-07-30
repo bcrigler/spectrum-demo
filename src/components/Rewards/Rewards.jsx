@@ -12,7 +12,6 @@ function Rewards() {
         totalDollarsEligible += 2 * Math.round(value.amount) % 100;
     });
     let rewardData = context.calculateRewards(totalDollarsEligible);
-    console.log(rewardData);
     let percent = rewardData.percentToReward;
     let status = rewardData.status;
 
