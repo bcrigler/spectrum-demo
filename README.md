@@ -6,6 +6,8 @@ To view the working demo, clone the repo and run these commands in the working d
 1. `npm install`
 2. `npm start`
 
+*Note: If you see a Python issue with fs-events, it won't stop the application from running.  I believe it just requires Python3+.
+
 Preview:
 
 ![Screenshot](spectrum-demo-screenshot.png)
