@@ -2,9 +2,17 @@ import React, {useContext} from 'react';
 import {RewardProgressBar} from "../RewardProgressBar/RewardProgressBar";
 import {GlobalContext} from "../../context/GlobalContext";
 
+/**
+ * This Rewards Hook utilizes the GlobalContext to keep most of the logic out of the component,
+ * this could be improved by moving the totalDollars logic to GlobalContext and just handing off the values needed to build
+ * this component.
+ *
+ * @returns {JSX.Element}
+ * @constructor
+ */
 function Rewards() {
     // here we can pull in our context to use global state within this stateful component
-    // this will give us access to this.context!
+    // this will give us access to GlobalContext in our custom Hook!
     const context = useContext(GlobalContext);
     let totalDollarsEligible = 0;
     context.userTransactions.forEach((value) => {
