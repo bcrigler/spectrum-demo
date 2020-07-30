@@ -10,4 +10,4 @@ To view the working demo, clone the repo and run these commands in the working d
 
 Preview:
 
-![Screenshot](spectrum-demo-screenshot.png)
+![Screenshot](spectrum-demo-screenshot-optimized.png)
