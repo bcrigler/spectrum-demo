@@ -4,9 +4,6 @@ import * as React from "react";
 import "./RewardProgressBar.css";
 
 export var RewardProgressBar = ({ width, percent, status }) => {
-    console.log('RewardProgressBar Width: ' + width);
-    console.log('RewardProgressBar Percent: ' + percent);
-    console.log('RewardProgressBar Status: ' + status);
     const [value, setValue] = React.useState(0);
 
     React.useEffect(() => {
