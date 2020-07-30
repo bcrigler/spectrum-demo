@@ -14,21 +14,8 @@ module.exports = {
                         console.log(url);
                         console.log(resourcePath);
                         console.log(context);
-                        // `resourcePath` is original absolute path to asset
-                        // `context` is directory where stored asset (`rootContext`) or `context` option
-
-                        // To get relative path you can use
-                        // const relativePath = path.relative(context, resourcePath);
-
-                        // if (/my-custom-image\.png/.test(resourcePath)) {
-                        //     return `other_public_path/${url}`;
-                        // }
-                        //
-                        // if (/images/.test(context)) {
-                        //     return `image_output_path/${url}`;
-                        // }
-                        //
-                        // return `public_path/${url}`;
+                        // this section I didn't finish but it would load files based on public paths.
+                        // I didn't need it for this demo.
                     },
                 }
             },
@@ -102,7 +89,7 @@ module.exports = {
         modules: [
             path.resolve(__dirname + '/components'),
             path.resolve(__dirname + '/data/'),
-            path.resolve(__dirname + '/hooks'),
+            path.resolve(__dirname + '/context'),
             path.resolve(__dirname + '/services'),
             path.resolve(__dirname + '/node_modules'),
             path.resolve(__dirname + '/assets')

@@ -5,13 +5,11 @@ const prodConfig = require('./webpack.config.prod');
 
 module.exports = (env, argv) => {
     switch(argv.NODE_ENV) {
+        // merges our common settings with our development build settings.
         case 'development':
-            console.log('__dirname' + __dirname);
             return mergePlugin.merge(devConfig, commonConfig);
-        // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        // if we had a prod build setup we would do this here.
+        // merges our common settings with our production build settings.
         case 'production':
-            console.log('__dirname' + __dirname);
             return mergePlugin.merge(prodConfig, commonConfig);
         default:
             throw new Error('No matching configuration was found!');

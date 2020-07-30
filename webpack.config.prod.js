@@ -1,48 +1,12 @@
 const webpack = require('webpack');
-const common = require('./webpack.config.common');
-const merge = require('webpack-merge');
-const postcss = require("postcss");
 const url = require("postcss-url");
 const path = require('path');
 const context = path.resolve(__dirname, 'src');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-// const cleanOptions = {
-//     // Absolute path to your webpack root folder (paths appended to this)
-//     // Default: root of your package
-//     root: __dirname,
-//
-//     // Write logs to console.
-//     verbose: true,
-//
-//     // Use boolean "true" to test/emulate delete. (will not remove files).
-//     // Default: false - remove files
-//     dry: false,
-//
-//     // If true, remove files on recompile.
-//     // Default: false
-//     watch: false,
-//
-//     // Instead of removing whole path recursively,
-//     // remove all path's content with exclusion of provided immediate children.
-//     // Good for not removing shared files from build directories.
-//     exclude: [ 'favicon.ico', 'assets' ],
-//
-//     // allow the plugin to clean folders outside of the webpack root.
-//     // Default: false - don't allow clean folder outside of the webpack root
-//     allowExternal: false,
-//
-//     // perform clean just before files are emitted to the output dir
-//     // Default: false
-//     beforeEmit: false
-// };
-//
-// const cleanPaths = ['dist'];
 
 module.exports = {
     context,
@@ -57,21 +21,8 @@ module.exports = {
                         console.log(url);
                         console.log(resourcePath);
                         console.log(context);
-                        // `resourcePath` is original absolute path to asset
-                        // `context` is directory where stored asset (`rootContext`) or `context` option
-
-                        // To get relative path you can use
-                        // const relativePath = path.relative(context, resourcePath);
-
-                        // if (/my-custom-image\.png/.test(resourcePath)) {
-                        //     return `other_public_path/${url}`;
-                        // }
-                        //
-                        // if (/images/.test(context)) {
-                        //     return `image_output_path/${url}`;
-                        // }
-                        //
-                        // return `public_path/${url}`;
+                        // this section I didn't finish but it would load files based on public paths.
+                        // I didn't need it for this demo.
                     },
                 }
             },
@@ -177,11 +128,11 @@ module.exports = {
     resolve: {
         modules: [
             path.resolve(__dirname + '/src/components'),
-            path.resolve(__dirname + '/src/utilities'),
-            path.resolve(__dirname + '/src/constants'),
-            path.resolve(__dirname + '/src/views'),
+            path.resolve(__dirname + '/src/services'),
+            path.resolve(__dirname + '/src/context'),
+            path.resolve(__dirname + '/src/data'),
             path.resolve(__dirname + '/node_modules'),
-            path.resolve(__dirname + '/assets/images')
+            path.resolve(__dirname + '/assets')
         ]
     }
 };
