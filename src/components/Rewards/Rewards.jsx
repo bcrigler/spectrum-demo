@@ -1,6 +1,5 @@
-import React, {useContext, useEffect, useLayoutEffect} from 'react';
+import React, {useContext} from 'react';
 import {RewardProgressBar} from "../RewardProgressBar/RewardProgressBar";
-import GlobalComponent from "../../context/GlobalComponent";
 import {GlobalContext} from "../../context/GlobalContext";
 
 function Rewards() {
